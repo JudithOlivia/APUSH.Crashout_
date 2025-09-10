@@ -9,13 +9,13 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f0f8ff;
+    background-color: #ca985b;
     color: #333;
 }
 
 /* Header styling */
 header {
-    background-color: #1e90ff;
+    background-color: #9c5915;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -50,7 +50,7 @@ section {
 
 /* Footer styling */
 footer {
-    background-color: #1e90ff;
+    background-color: #9c5915;
     color: white;
     text-align: center;
     padding: 15px 0;
