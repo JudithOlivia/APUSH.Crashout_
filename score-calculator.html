@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APUSH_Crashout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>A.P. United States History</h1>
+        <nav>
+            <ul>
+                <li><a href="APUSH_Crashout.html">Home</a></li>
+                <li><a href="units.html">Units</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="exam-format.html">Format</a></li>
+                <li><a href="score-calculator.html">Score Calculator</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <div id="apush" class="tabcontent">
+            <h1>APUSH Score Estimator</h1>
+            <form id="apush-form">
+                <!-- MCQs -->
+                <label>MCQs (out of 55): </label>
+                <input type="number" id="mcq" min="0" max="55"><br><br>
+
+                <!-- SAQs -->
+                <label>Short Answer Questions (3 total, each 0–3): </label>
+                <input type="number" id="saq1" min="0" max="3">
+                <input type="number" id="saq2" min="0" max="3">
+                <input type="number" id="saq3" min="0" max="3"><br><br>
+
+                <!-- DBQ -->
+                <label>DBQ (0–7): </label>
+                <input type="number" id="dbq" min="0" max="7"><br><br>
+
+                <!-- LEQ -->
+                <label>Long Essay Question (0–6): </label>
+                <input type="number" id="leq" min="0" max="6"><br><br>
+
+                <button type="button" onclick="calculateAPUSH()">Calculate Score</button>
+            </form>
+
+            <!-- Results -->
+            <div id="apush-results" class="results-box" style="margin-top:20px;">
+                <p><strong>Total Composite Score:</strong> <span id="composite">0</span> / 130</p>
+                <p><strong>Estimated AP Score:</strong> <span id="ap-score">N/A</span></p>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="score-calculator.js"></script>
+
+    <footer>
+        <p>&copy; 2025-2026 APUSH Study Guide</p>
+    </footer>
+</body>
+</html>
