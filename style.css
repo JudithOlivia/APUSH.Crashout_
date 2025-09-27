@@ -123,3 +123,49 @@ header {
   transform: scale(1.05);
 }
 
+
+
+/* Score Calculator */
+
+/* Layout */
+.calculator-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.calculator-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.results-box {
+  flex: 1;
+  max-width: 40%;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Sliders */
+input[type="range"] {
+  width: 100%;
+  margin: 8px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background: #4a148c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #6a1b9a;
+}

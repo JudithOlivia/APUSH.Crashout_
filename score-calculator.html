@@ -24,32 +24,44 @@
     <main>
         <div id="apush" class="tabcontent">
             <h1>APUSH Score Estimator</h1>
-            <form id="apush-form">
+            <!-- Left: Inputs -->
+            <form id="apush-form" class="calculator-left">
                 <!-- MCQs -->
-                <label>MCQs (out of 55): </label>
-                <input type="number" id="mcq" min="0" max="55"><br><br>
+                <label>MCQs (out of 55): <span id="mcq-value">0</span></label>
+                <input type="range" id="mcq" min="0" max="55" value="0" oninput="updateValue('mcq')"><br><br>
 
                 <!-- SAQs -->
-                <label>Short Answer Questions (3 total, each 0–3): </label>
-                <input type="number" id="saq1" min="0" max="3">
-                <input type="number" id="saq2" min="0" max="3">
-                <input type="number" id="saq3" min="0" max="3"><br><br>
+                <label>Short Answer Q1 (0–3): <span id="saq1-value">0</span></label>
+                <input type="range" id="saq1" min="0" max="3" value="0" oninput="updateValue('saq1')"><br>
+
+                <label>Short Answer Q2 (0–3): <span id="saq2-value">0</span></label>
+                <input type="range" id="saq2" min="0" max="3" value="0" oninput="updateValue('saq2')"><br>
+
+                <label>Short Answer Q3 (0–3): <span id="saq3-value">0</span></label>
+                <input type="range" id="saq3" min="0" max="3" value="0" oninput="updateValue('saq3')"><br><br>
 
                 <!-- DBQ -->
-                <label>DBQ (0–7): </label>
-                <input type="number" id="dbq" min="0" max="7"><br><br>
+                <label>DBQ (0–7): <span id="dbq-value">0</span></label>
+                <input type="range" id="dbq" min="0" max="7" value="0" oninput="updateValue('dbq')"><br><br>
 
                 <!-- LEQ -->
-                <label>Long Essay Question (0–6): </label>
-                <input type="number" id="leq" min="0" max="6"><br><br>
+                <label>Long Essay (0–6): <span id="leq-value">0</span></label>
+                <input type="range" id="leq" min="0" max="6" value="0" oninput="updateValue('leq')"><br><br>
 
                 <button type="button" onclick="calculateAPUSH()">Calculate Score</button>
             </form>
 
-            <!-- Results -->
-            <div id="apush-results" class="results-box" style="margin-top:20px;">
+            <!-- Right: Results -->
+            <div id="apush-results" class="results-box">
+                <h2>Results</h2>
+                <p><strong>MCQ Composite:</strong> <span id="mcq-comp">0</span> / 52</p>
+                <p><strong>SAQ Composite:</strong> <span id="saq-comp">0</span> / 27</p>
+                <p><strong>DBQ Composite:</strong> <span id="dbq-comp">0</span> / 33</p>
+                <p><strong>LEQ Composite:</strong> <span id="leq-comp">0</span> / 20</p>
+                <hr>
                 <p><strong>Total Composite Score:</strong> <span id="composite">0</span> / 130</p>
                 <p><strong>Estimated AP Score:</strong> <span id="ap-score">N/A</span></p>
+            </div>
             </div>
         </div>
         
