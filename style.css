@@ -7,18 +7,43 @@
 
 /* Body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #ebcaa1;
     color: #333;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
-/* Header styling */
+/* Header styling - full width */
 header {
-    background-color: #9c5915;
+    background-color: #2c3e50;
     color: white;
     padding: 20px 0;
     text-align: center;
+    margin: -20px -20px 25px -20px; /* Negative margins to stretch beyond body padding */
+    width: 100vw; /* Full viewport width */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Fix header content alignment */
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    color: white;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 10px;
 }
 
 header nav ul {
@@ -36,97 +61,132 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+    background-color: rgba(255,255,255,0.2);
+    text-decoration: none;
 }
 
-/* Section styling */
-section {
-    padding: 50px;
+/* Main content headings */
+.main-heading {
+    color: #2c3e50;
     text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-/* Footer styling */
-footer {
-    background-color: #9c5915;
+h2 {
+    color: #2980b9;
+    margin-top: 25px;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+}
+
+h3 {
+    color: #16a085;
+    margin: 15px 0 10px 0;
+}
+
+/* Key concept box */
+.key-concept {
+    background-color: #e8f4f8;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+    font-style: italic;
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
     color: white;
-    text-align: center;
-    padding: 15px 0;
 }
 
-/* General reset */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-/* Header */
-header {
-  background-color:  #9c5915;
-  color: white;
-  padding: 15px;
-  text-align: center;
+/* Sections */
+.section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Navbar */
-.navbar {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  background-color: #9c5915;
+/* Key terms */
+.key-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
 }
 
-.navbar li {
-  margin: 0;
+.term {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
 }
 
-.navbar a {
-  display: block;
-  padding: 12px 20px;
-  color: white;
-  text-decoration: none;
-  transition: background 0.3s;
+/* Essay topics */
+.essay-topics {
+    background-color: #fff8e1;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #f1c40f;
 }
 
-.navbar a:hover {
-  background-color: #9c5915;
+/* Buttons */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
 }
 
-/* Units grid */
-.units-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 20px;
+button:hover {
+    background-color: #2980b9;
 }
 
-.units-grid button {
-  background-color: #9c5915;
-  color: white;
-  border: none;
-  padding: 40px;
-  border-radius: 8px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.units-grid button:hover {
-  background-color: #4c2f04;
-  transform: scale(1.05);
-}
-
-
-
-/* home page */
-/* Box Buttons Container */
+/* Home page box buttons */
 .box-buttons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -135,7 +195,6 @@ header {
     padding: 0 1rem;
 }
 
-/* Individual Box Button Styles */
 .box-button {
     background: white;
     border-radius: 12px;
@@ -153,45 +212,43 @@ header {
     min-height: 200px;
 }
 
-/* Box Button Hover Effects */
 .box-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border-color: #1a2a6c;
+    border-color: #3498db;
 }
 
-/* Individual Box Button Colors */
+/* Box button color variations */
 .box-button.units {
-    background: linear-gradient(135deg, #b35d33 0%, #e68e4b 100%);
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
     color: white;
 }
 
 .box-button.timeline {
-    background: linear-gradient(135deg, #d3854d 0%, #e4ba93 100%);
+    background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
     color: white;
 }
 
 .box-button.exam {
-    background: linear-gradient(135deg, #b35d33 0%, #e68e4b 100%);
+    background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
     color: white;
 }
 
 .box-button.resources {
-    background: linear-gradient(135deg, #d3854d 0%, #e4ba93 100%);
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
     color: white;
 }
 
-/* Box Button Icons */
 .box-button i {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-/* Box Button Text */
 .box-button h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
+    color: inherit;
 }
 
 .box-button p {
@@ -200,8 +257,44 @@ header {
     margin: 0;
 }
 
-/* Responsive Design */
+/* Units grid */
+.units-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.units-grid button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.units-grid button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Main content container */
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
+    .units-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .box-buttons {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -215,17 +308,30 @@ header {
     .box-button h3 {
         font-size: 1.3rem;
     }
+    
+    header nav ul {
+        flex-direction: column;
+    }
+    
+    header nav ul li {
+        margin: 5px 0;
+    }
 }
 
-/* Icon Styles using Font Awesome classes */
-.fas {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+@media (max-width: 480px) {
+    .units-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    body {
+        padding: 15px;
+    }
+    
+    .section {
+        padding: 15px;
+    }
+    
+    header {
+        margin: -15px -15px 25px -15px;
+    }
 }
-
-.fa-book::before { content: "\f02d"; }
-.fa-history::before { content: "\f1da"; }
-.fa-file-alt::before { content: "\f15c"; }
-.fa-tools::before { content: "\f7d9"; }
-
-
